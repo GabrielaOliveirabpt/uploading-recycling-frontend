@@ -1,15 +1,17 @@
 import axios from 'axios'
 import * as types from './actionTypes'
 
-const BACKEND_URI = `http://localhost:5000/api/items/`
+const BACKEND_URI = `${process.env.REACT_APP_API_URL}/api/items/`
 
 
 export const fetchQuery = (query) => {
     return dispatch => {
         dispatch(queryLoading())
-        axios.get(`${BACKEND_URI}`, { params: {
-            q: query
-        }})
+        axios.get(`${BACKEND_URI}`, {
+            params: {
+                q: query
+            }
+        })
             .then(res => {
                 dispatch(fetchQuerySuccess(res.data))
             })
@@ -41,9 +43,11 @@ export const fetchQueryFailure = error => ({
 export const fetchBin = (colorBin) => {
     return dispatch => {
         dispatch(binLoading())
-        axios.get(`${BACKEND_URI}`, { params: {
-            bin: colorBin
-        }})
+        axios.get(`${BACKEND_URI}`, {
+            params: {
+                bin: colorBin
+            }
+        })
             .then(res => {
                 dispatch(fetchBinSuccess(res.data))
             })
@@ -75,9 +79,11 @@ export const fetchBinFailure = error => ({
 export const fetchApprovedItems = () => {
     return dispatch => {
         dispatch(ApprovedItemsLoading())
-        axios.get(`${BACKEND_URI}`, { params: {
-            approved: true
-        }})
+        axios.get(`${BACKEND_URI}`, {
+            params: {
+                approved: true
+            }
+        })
             .then(res => {
                 console.log(res.data)
                 dispatch(fetchApprovedSuccess(res.data))
@@ -110,9 +116,11 @@ export const fetchApprovedFailure = error => ({
 export const fetchTickets = () => {
     return dispatch => {
         dispatch(ticketsLoading())
-        axios.get(`${BACKEND_URI}`, { params: {
-            approved: false
-        }})
+        axios.get(`${BACKEND_URI}`, {
+            params: {
+                approved: false
+            }
+        })
             .then(res => {
                 dispatch(fetchTicketsSuccess(res.data))
             })
@@ -141,7 +149,7 @@ export const fetchTicketsFailure = error => ({
     ]
 })
 
-export const addItem = ( name, description, bin ) => {
+export const addItem = (name, description, bin) => {
     return dispatch => {
         dispatch(addItemStarted())
         axios.post(`${BACKEND_URI}`, { name, description, bin, completed: false })
