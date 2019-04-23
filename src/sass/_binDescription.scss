@@ -1,0 +1,71 @@
+.bin-descr-card-2 {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 2px 4px 2px 6px;
+  background-color: #fff;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+
+.card-title2 {
+  font-weight: bold;
+  display: inline;
+  font-size: 1rem;
+}
+
+.table2 {
+  width: 100%;
+}
+
+.desrc-toggle-switch2 {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline;
+  color: #f88;
+  font-size: 1.3rem;
+  margin-right: 6px;
+}
+
+.wastebin-icon2 {
+  width: 35px;
+  height: 35px;
+  margin: 3px 9px 3px 8px;
+}
+.wastebin-icon2:hover {
+  cursor: default;
+}
+
+.button-container-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.blueBackground {
+  background-color: #cdf;
+}
+.greenBackground {
+  background-color: #cfc;
+}
+.whiteBackground {
+  background-color: white;
+  border: 1px solid #999;
+}
+.yellowBackground {
+  background-color: #ffb;
+}
+.brownBackground {
+  background-color: #feb;
+}
+.greyBackground {
+  background-color: #dedede;
+}
+.noneBackground {
+  background-color: white;
+  border: 1px solid #f99;
+}

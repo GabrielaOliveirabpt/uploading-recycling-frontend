@@ -1,0 +1,64 @@
+.bin-icon-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.h4-2 {
+  margin-top: 10px;
+}
+
+.img2 {
+  width: 76px;
+  height: 76px;
+  margin: 1px;
+}
+.img2:hover {
+  cursor: pointer;
+}
+
+.input-and-button2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -8px;
+}
+
+.form-control2 {
+  min-width: 180px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding-left: 10px;
+  height: 38px;
+  margin-bottom: -20px;
+  margin-top: -18px;
+}
+
+.p2 {
+  margin-top: 7px;
+  margin-bottom: 10px;
+  padding-left: 3px;
+}
+
+.p2-1 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  padding-left: 3px;
+}
+
+.no-results-hint2 {
+  border-radius: 5px;
+  background-color: #fcc;
+  padding: 7px 12px;
+}
+
+.button2 {
+  margin-top: 3px;
+  margin-right: 2px;
+}
+
+.search-area-map-hint {
+  padding: 10px 0 5px 0;
+}

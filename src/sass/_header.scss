@@ -1,0 +1,31 @@
+.nav-text {
+    font-size: 18px;
+}
+
+.bg-success {
+    background-color: #12A065 !important;
+}
+
+.active span {
+    color: rgba(255, 255, 255, 1) !important;    
+    // font-weight: bold;
+    
+}
+
+.specialFont {
+    font-family: 'Leckerli One', cursive;
+    font-size: 40px;
+}
+
+a:hover:not(.active) span {
+    // background-color: white; 
+    color: rgba(255, 255, 255, 0.90) !important;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.9);
+    
+}
+
+.text-grey {
+    color: rgba(255, 255, 255, 0.75) !important;
+    
+}
+

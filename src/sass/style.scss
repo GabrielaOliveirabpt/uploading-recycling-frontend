@@ -1,0 +1,44 @@
+@import 'item';
+@import 'searchArea';
+@import 'addItemForm';
+@import 'welcomePage';
+@import 'footer';
+@import 'ticket';
+@import 'editTicketForm';
+@import 'binDescription';
+@import 'ticketList';
+@import 'header';
+@import 'footer';
+@import 'links';
+@import 'loading';
+@import 'mapSearch';
+@import 'learnMore';
+@import 'adminLogin';
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One');
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  /* box-sizing: inherit; */
+  box-sizing: border-box !important;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 4.25rem;
+  min-height: 100%;
+  background-color: white;
+}
+
+.btn-secondary {
+  background-color: #8b8b8b;
+}
+

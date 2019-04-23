@@ -1,0 +1,110 @@
+.item-card5 {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 3px 8px 0 7px;
+  background-color: #fff;
+  font-size: .9rem;
+  margin-bottom: 1px;
+}
+
+.card-title5 {
+  font-weight: bold;
+  display: inline;
+  font-size: 1rem;
+  min-width: 100px;
+}
+
+.desrc-toggle-switch {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline;
+  color: #f88;
+  font-size: 1.3rem;
+  margin-right: 6px;
+}
+
+.wastebin-icon5 {
+  width: 35px;
+  height: 35px;
+  margin: 3px 5px 3px 16px;
+}
+.wastebin-icon5:hover {
+  cursor: default;
+}
+
+.button5 {
+  margin-left: 6px;
+}
+.button5:hover {
+  cursor: pointer;
+}
+
+.table5 {
+  width: 100%;
+}
+
+.select-ticket {
+  background-image: linear-gradient(#fff, #d5d5d5);
+  /*background-color: #dfdfff;*/
+  color: black;
+  font-size: 0.9rem;
+  min-width: 160px !important;
+  max-width: 200px;
+
+  height: 28px !important;
+  padding-top: 3px;
+  padding-left: 3px;
+  border: 1px solid #aaa;
+  border-radius: 2px !important;
+}
+.select-ticket:hover {
+  cursor: pointer;
+}
+
+.popup-container-ticket {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.category-hint {
+  border-radius: 5px;
+  background-color: #70e1e9;
+  padding: 8px 18px 15px 18px;
+  z-index: 2;
+  margin: auto;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  text-align: left;
+}
+
+.close-hint-char-ticket {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0 0 -15px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*
+.buttons-container {
+  text-align: right;
+}
+*/
+
+.button-container-5 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
