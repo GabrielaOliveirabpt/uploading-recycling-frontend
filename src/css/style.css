@@ -114,9 +114,11 @@
 
 .button3 {
   margin-right: 10px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  background-color: #02bd6f; }
 
 .button3:hover {
+  background-color: #02bd6f;
   cursor: pointer; }
 
 .h4-3 {
@@ -471,7 +473,7 @@ footer {
   font-size: 18px; }
 
 .bg-success {
-  background-color: #12A065 !important; }
+  background-color: #02bd6f !important; }
 
 .active span {
   color: white !important; }
