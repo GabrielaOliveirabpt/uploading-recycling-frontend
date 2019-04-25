@@ -11,13 +11,12 @@ class Header extends React.Component {
 
                     <Navbar.Brand className="pb-0 pt-0">
                         <Nav.Link className="pb-0 pt-0" href="/">
-                            <img src="../images/logo.svg" className="d-inline-block align-top m-1" width="50" height="50" alt="logo" /> &nbsp;
-                        <span className="d-sm-inline d-none text-white pl-1 specialFont">WasteAid</span>
+                            <img src="../images/logo.svg" className="d-inline-block align-top m-1 logo-image" alt="logo" /> &nbsp;
+                        <span className=" text-white pl-1 specialFont">WasteAid</span>
                         </Nav.Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-
                         <Nav className="">
                             <Nav.Link className="nav-text text-grey" href="/" exact="true" activeclassname="active"><span className="pb-1 hover underline">Home</span></Nav.Link>
                             <Nav.Link className="nav-text text-grey" href="/searchArea/default" activeclassname="active"><span className="pb-1 hover underline">Search</span></Nav.Link>
