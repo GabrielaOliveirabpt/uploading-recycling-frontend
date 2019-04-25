@@ -496,9 +496,21 @@ footer {
   font-family: 'Leckerli One', cursive;
   font-size: 40px; }
 
+.logo-image {
+  width: 50px;
+  height: 50px; }
+
 .button-admin-header {
   background-color: #02bd6f !important;
   border: none; }
+
+@media only screen and (max-width: 392px) {
+  .logo-image {
+    width: 30px;
+    height: 30px; }
+  .specialFont {
+    font-family: 'Leckerli One', cursive;
+    font-size: 28px; } }
 
 a:hover:not(.active) span.underline {
   color: rgba(255, 255, 255, 0.9) !important;
