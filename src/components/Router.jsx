@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import WelcomePage from './WelcomePage'
 import AboutUs from './AboutUs'
 import LearnMore from './LearnMore'
@@ -16,53 +16,33 @@ import AdminFrame from './AdminFrame';
 //import NotFound from './NotFound';
 
 const Root = (props) => {
-    const { history, location } = props
+    const {history, location} = props
     return (
         <Router history={history} location={location}>
-            <Route exact path="/" component={WelcomePage} />
-            <Route path="/searchArea/:searchString" component={SearchArea} />
-            <Route path="/mapSearch/:rubbishCategory" component={MapSearch} />
 
-            <Route path="/add" component={AddItemForm} />
-            <Route path="/learnMore" component={LearnMore} />
-            <Route path="/aboutUs" component={AboutUs} />
+            <div>
 
-            <Route history={history} location={location} path="/admin/login" component={AdminLogin} />
+                <Route exact path="/" component={WelcomePage}/>
+                <Route path="/searchArea/:searchString" component={SearchArea}/>
+                <Route path="/mapSearch/:rubbishCategory" component={MapSearch}/>
 
-            <Route path="/admin/frame" component={AdminFrame} />
-            {/* those two now have special header: HeaderAdmin */}
-            <Route path="/items" component={ItemsList} />
-            <Route path="/admin/tickets" component={TicketList} />
+                <Route path="/add" component={AddItemForm}/>
+                <Route path="/learnMore" component={LearnMore}/>
+                <Route path="/aboutUs" component={AboutUs}/>
 
-            {/* <Route component={NotFound} /> */}
+                <Route history={history} location={location} path="/admin/login" component={AdminLogin}/>
+
+                <Route path="/admin/frame" component={AdminFrame}/>
+                {/* those two now have special header: HeaderAdmin */}
+                <Route path="/items" component={ItemsList}/>
+                <Route path="/admin/tickets" component={TicketList}/>
+
+                {/* <Route component={NotFound} /> */}
+
+            </div>
+
         </Router>
     )
 }
-
-// class Root extends React.Component {
-
-//     render() {
-//         return (
-//             <Router>
-//                 <Route exact path="/" component={WelcomePage} />
-//                 <Route path="/searchArea/:searchString" component={SearchArea} />
-//                 <Route path="/mapSearch/:rubbishCategory" component={MapSearch} />
-
-//                 <Route path="/add" component={AddItemForm} />
-//                 <Route path="/learnMore" component={LearnMore} />
-//                 <Route path="/aboutUs" component={AboutUs} />
-
-//                 <Route path="/admin/login" component={AdminLogin} />
-
-//                 <Route path="/admin/frame" component={AdminFrame} />
-//                 {/* those two now have special header: HeaderAdmin */}
-//                 <Route path="/items" component={ItemsList} />
-//                 <Route path="/admin/tickets" component={TicketList} />
-
-//                 {/* <Route component={NotFound} /> */}
-//             </Router>
-//         )
-//     }
-// }
 
 export default Root

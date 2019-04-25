@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import EditTicket from './EditTicket'
 import {disposalSites} from '../hardCodedContent/disposalSites'
-import { removeItem, editItem } from '../actions/index'
+import { removeItem, editItem } from '../actions/ticketActions'
 
 
 // corresponding style files: _ticket.scss and _addItemForm.scss
@@ -17,7 +17,7 @@ class CategoryHint extends Component {
             <div className="popup-container-ticket">
                 <div className="category-hint">
                     <p className="close-hint-char-ticket" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
-                    Please set a CATEGORY<br/>before editing or approving!
+                    Please set a CATEGORY<br/>before editing!
                 </div>
             </div>
         )
@@ -42,13 +42,15 @@ class Ticket extends Component {
 
     getAllWasteCategories() {
         let allCategoryArrays = [];
-
         disposalSites.forEach(function (arrayItem) {
             allCategoryArrays.push(arrayItem.categories);
         });
 
-        let allCategoriesWithDoubles = allCategoryArrays.flat();
-        return [...new Set(allCategoriesWithDoubles)].sort()
+        // join arrays, and remove spaces only around commas
+        let allCategoriesWithDoubles = allCategoryArrays.join().replace(/\s*,\s*/g, ",");
+        let allCategoriesWithoutDoubles = Array.from(new Set(allCategoriesWithDoubles.split(','))).toString();
+
+        return allCategoriesWithoutDoubles.split(",").sort();
     }
 
     handleChange() {
@@ -164,9 +166,9 @@ class Ticket extends Component {
 
                                 {!this.state.categoryHintHidden && <CategoryHint hideHint={this.toggleCategoryHint}/>}
                                 {/* <button className="button5" onClick={() => {this.confirmTicket()}}>approve</button> */}
-                                <button className="button5" onClick={() => {this.editTicket()}}>edit</button>
+                                <button className="btn btn-outline-secondary btn-sm button5" onClick={() => {this.editTicket()}}>edit</button>
                                 {!this.state.isHidden && <EditTicket item={this.props.item} editItem={this.props.editItem} toggleHidden={this.toggleHidden}/>}
-                                <button className="button5" onClick={() => {this.props.removeItem(this.props.item._id)}}>remove</button>
+                                <button className="btn btn-outline-secondary btn-sm button5" onClick={() => {this.props.removeItem(this.props.item._id)}}>remove</button>
                                 <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
                             </div>
                         </td>
