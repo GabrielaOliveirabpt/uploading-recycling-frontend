@@ -2,7 +2,7 @@ import axios from 'axios'
 import decode from "jwt-decode";
 import * as types from './actionTypes'
 
-const BACKEND_URI = `http://localhost:5000/api/users/`
+const BACKEND_URI = `https://uploading-recycling-backend.herokuapp.com/api/users/`
 
 export const login = (username, password, history) => {
     return dispatch => {

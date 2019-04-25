@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as types from './actionTypes'
 
-const BACKEND_URI = `http://localhost:5000/api/items/`
+const BACKEND_URI = `https://uploading-recycling-backend.herokuapp.com/api/items/`
 
 
 export const fetchQuery = (query) => {

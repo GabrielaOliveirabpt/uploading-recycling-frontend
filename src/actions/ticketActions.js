@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as types from './actionTypes'
 
-const BACKEND_URI = `http://localhost:5000/api/admin/tickets/`
+const BACKEND_URI = `https://uploading-recycling-backend.herokuapp.com/api/admin/tickets/`
 
 export const fetchApprovedItems = (token, history) => {
     return dispatch => {
