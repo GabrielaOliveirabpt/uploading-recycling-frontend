@@ -721,5 +721,5 @@ body {
   background-color: white; }
 
 .btn-outline-secondary:hover, select:hover {
-  background-color: #12A065;
+  background-color: #12A065 !important;
   color: white; }
