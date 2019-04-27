@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Footer from './Footer'
 import Header from './Header'
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 class SearchItemHint extends Component {
     render() {
@@ -9,8 +9,8 @@ class SearchItemHint extends Component {
             <div className="popup-container-welcome">
                 <div className="search-item-hint-welcome">
                     <p className="close-hint-char-welcome" onClick={this.props.hideHint}
-                       title="Close pop-up">&#10005;</p>
-                    Please enter search item<br/>before starting the search!
+                        title="Close pop-up">&#10005;</p>
+                    Please enter search item<br />before starting the search!
                 </div>
             </div>
         )
@@ -30,9 +30,8 @@ class WelcomePage extends Component {
         this.input = React.createRef()
     }
 
-
     handleChange = event => {
-        this.setState({soughtItem: event.target.value.trim()})
+        this.setState({ soughtItem: event.target.value.trim() })
     }
 
     toggleSearchItemHint = () => {
@@ -45,20 +44,38 @@ class WelcomePage extends Component {
         if (this.state.soughtItem && this.state.soughtItem !== "default") {
             this.props.history.push(`/searchArea/${this.state.soughtItem}`)
         } else {
-            this.setState({searchItemHintHidden: false});
+            this.setState({ searchItemHintHidden: false });
             event.target.reset()
         }
         event.preventDefault();
     }
 
+    goToSearchArea(item) {
+        this.props.history.push(`/searchArea/${item}`)
+    }
+
     render() {
+        // let listStyle = {
+        //     listStyleImage: url('../images/green-dot.svg')
+        // }
+
         return (
             <React.Fragment>
-                <Header/>
+                <Header />
                 <div className="container">
                     <h1 className="h2-0 font-weight-bold">Welcome to Wasteaid</h1>
 
                     <div className="list-container-0">
+
+                        <div className="list-box-0">
+                            <h4>This little app can help you:</h4>
+                            <ul> {/* style={listStyle}*/}
+                                <li>Separate your rubbish properly</li>
+                                <li>Use the public waste disposal system</li>
+                                <li>Reduce your daily waste amount</li>
+                                <li>Find disposal sites for special refuse</li>
+                            </ul>
+                        </div>
 
                         <div className="list-box-0">
                             <h4>Contribute to a better future</h4>
@@ -67,16 +84,6 @@ class WelcomePage extends Component {
                                 <li>Dispose of your refuse eco-friendly</li>
                                 <li>Keep your ecological footprint small</li>
                                 <li>Help save natural resources</li>
-                            </ul>
-                        </div>
-
-                        <div className="list-box-0">
-                            <h4>This little app can help you</h4>
-                            <ul>
-                                <li>separate your rubbish properly</li>
-                                <li>use the public waste disposal system</li>
-                                <li>reduce your daily waste amount</li>
-                                <li>find disposal sites for special refuse</li>
                             </ul>
                         </div>
 
@@ -101,15 +108,16 @@ class WelcomePage extends Component {
                             */}
 
                     </div>
+
                     <div className="form-box-welcome">
                         <form className="form-welcome" onSubmit={this.handleSubmit}>
                             <p className="p2-welcome">Which waste bin is best for my trash?</p>
                             <div className="input-and-button-welcome">
                                 <input type="text"
-                                       className="form-control form-welcome"
-                                       placeholder="Type name of waste item here..."
-                                       required={true} ref={this.input}
-                                       onChange={this.handleChange}
+                                    className="form-control form-welcome"
+                                    placeholder="Type name of waste item here..."
+                                    required={true} ref={this.input}
+                                    onChange={this.handleChange}
                                 />
                                 <input
                                     className="btn btn-outline-secondary button-welcome"
@@ -121,10 +129,16 @@ class WelcomePage extends Component {
                         </form>
                     </div>
 
-                    {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint}/>}
+                    {!this.state.searchItemHintHidden && <SearchItemHint hideHint={this.toggleSearchItemHint} />}
+
+                    {/* <div className="most-searched-items">
+                        <div className="item-picture-container">
+                            <img src="../images/brown-glass-bottles-256x190.jpg" alt="brown glass bottles"/>
+                        </div>
+                    </div> */}
 
                 </div>
-                <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }
