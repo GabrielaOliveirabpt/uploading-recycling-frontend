@@ -91,7 +91,8 @@
 
 .button2 {
   margin-top: 3px;
-  margin-right: 2px; }
+  margin-right: 2px;
+  margin-left: 10px; }
 
 .search-area-map-hint {
   padding: 10px 0 5px 0; }

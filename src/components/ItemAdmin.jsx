@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import EditTicket from './EditTicket'
-import {disposalSites} from '../hardCodedContent/disposalSites'
+import { disposalSites } from '../hardCodedContent/disposalSites'
 import { removeItem, editItem } from '../actions/ticketActions'
 
 
@@ -16,8 +16,8 @@ class CategoryHint extends Component {
         return (
             <div className="popup-container-ticket">
                 <div className="category-hint">
-                    <p className="close-hint-char-ticket" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
-                    Please set a CATEGORY<br/>before editing!
+                    <p className="close-hint-char-item-admin" onClick={this.props.hideHint} title="Close pop-up">&#10005;</p>
+                    Please select a<br />CATEGORY before editing!
                 </div>
             </div>
         )
@@ -68,7 +68,7 @@ class Ticket extends Component {
         if (this.props.item.category) {
             this.toggleHidden()
         } else {
-            this.setState({categoryHintHidden: false})
+            this.setState({ categoryHintHidden: false })
         }
     }
 
@@ -148,36 +148,36 @@ class Ticket extends Component {
             <div className="item-card5">
                 <table className="table5">
                     <tbody>
-                    <tr>
-                        <td>
-                            <div className="desrc-toggle-switch" onClick={this.toggleItemDescr} title={this.state.toggleHint}>
-                                {this.state.toggleSwitchChar}
-                            </div>
-                            <div className="card-title5">{this.props.item.name}</div>
-                        </td>
-                        <td>
-                            <div className="button-container-5">
-                                <select className="form-control select-ticket" defaultValue={this.props.item.category} onChange={this.handleChange} ref={this.category}>
-                                    <option value="">Select a category</option>
-                                    {this.getAllWasteCategories().map((item, index) => {
-                                        return <option value={item} key={index}>{item}</option>
-                                    })}
-                                </select>
+                        <tr>
+                            <td>
+                                <div className="desrc-toggle-switch" onClick={this.toggleItemDescr} title={this.state.toggleHint}>
+                                    {this.state.toggleSwitchChar}
+                                </div>
+                                <div className="card-title5">{this.props.item.name}</div>
+                            </td>
+                            <td>
+                                <div className="button-container-5">
+                                    <select className="form-control select-ticket" defaultValue={this.props.item.category} onChange={this.handleChange} ref={this.category}>
+                                        <option value="">Select a category</option>
+                                        {this.getAllWasteCategories().map((item, index) => {
+                                            return <option value={item} key={index}>{item}</option>
+                                        })}
+                                    </select>
 
-                                {!this.state.categoryHintHidden && <CategoryHint hideHint={this.toggleCategoryHint}/>}
-                                {/* <button className="button5" onClick={() => {this.confirmTicket()}}>approve</button> */}
-                                <button className="btn btn-outline-secondary btn-sm button5" onClick={() => {this.editTicket()}}>edit</button>
-                                {!this.state.isHidden && <EditTicket item={this.props.item} editItem={this.props.editItem} toggleHidden={this.toggleHidden}/>}
-                                <button className="btn btn-outline-secondary btn-sm button5" onClick={() => {this.props.removeItem(this.props.item._id)}}>remove</button>
-                                <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()}/>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan="2">
-                            {this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description} /> : null}
-                        </td>
-                    </tr>
+                                    {!this.state.categoryHintHidden && <CategoryHint hideHint={this.toggleCategoryHint} />}
+                                    {/* <button className="button5" onClick={() => {this.confirmTicket()}}>approve</button> */}
+                                    <button className="btn btn-outline-secondary btn-sm button5" onClick={() => { this.editTicket() }}>edit</button>
+                                    {!this.state.isHidden && <EditTicket item={this.props.item} editItem={this.props.editItem} toggleHidden={this.toggleHidden} />}
+                                    <button className="btn btn-outline-secondary btn-sm button5" onClick={() => { this.props.removeItem(this.props.item._id) }}>remove</button>
+                                    <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon" title={this.binIconTitle()} />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colSpan="2">
+                                {this.state.itemDescrVisible ? <ItemDescription descr={this.props.item.description} /> : null}
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
