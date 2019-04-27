@@ -719,3 +719,7 @@ body {
   padding-bottom: 4.25rem;
   min-height: 100%;
   background-color: white; }
+
+.btn-outline-secondary:hover, select:hover {
+  background-color: #12A065;
+  color: white; }
