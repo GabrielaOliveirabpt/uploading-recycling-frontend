@@ -63,7 +63,7 @@ class WelcomePage extends Component {
             <React.Fragment>
                 <Header />
                 <div className="container">
-                    <h1 className="h2-0 font-weight-bold">Welcome to Wasteaid</h1>
+                    <h1 className="h2-0">Welcome to Wasteaid</h1>
 
                     <div className="list-container-0">
 
