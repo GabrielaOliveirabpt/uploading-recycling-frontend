@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 // import {NavLink} from 'react-router-dom'
-import { withRouter } from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 
 // corresponding style files: _item.scss, _ticket.scss
 
@@ -92,30 +92,30 @@ class Item extends Component {
             <div className="item-card5" id="search-result">
                 <table className="table1">
                     <tbody>
-                        <tr>
-                            <td>
-                                <div className="desrc-toggle-switch-1" onClick={this.toggleItemDescr}
-                                    title={this.state.toggleHint}>
-                                    &nbsp;{this.state.toggleSwitchChar}
-                                </div>
-                                <div className="card-title5">{this.props.item.name}</div>
-                            </td>
-                            <td>
-                                <div className="button-container-1">
-                                    <button className="btn btn-outline-secondary btn-sm" title="show disposal sites in map" onClick={this.goToMap}>
-                                        Map
+                    <tr>
+                        <td>
+                            <div className="desrc-toggle-switch-1" onClick={this.toggleItemDescr}
+                                 title={this.state.toggleHint}>
+                                {this.state.toggleSwitchChar}
+                            </div>
+                            <div className="card-title5">{this.props.item.name}</div>
+                        </td>
+                        <td>
+                            <div className="button-container-1">
+                                <button className="btn btn-outline-secondary btn-sm" title="show disposal sites in map" onClick={this.goToMap}>
+                                    Map
                                 </button>
-                                    <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon"
-                                        title={this.binIconTitle()} />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colSpan="2">
-                                {this.state.itemDescrVisible ?
-                                    <ItemDescription descr={this.props.item.description} /> : null}
-                            </td>
-                        </tr>
+                                <img className="wastebin-icon5" src={this.binIconPath()} alt="wastebin icon"
+                                     title={this.binIconTitle()}/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">
+                            {this.state.itemDescrVisible ?
+                                <ItemDescription descr={this.props.item.description}/> : null}
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
