@@ -1,5 +1,4 @@
 # The project
-===
 
 This project was created as a Final Project for the one year Web Development course offered by Digital Career Institute - DCI.
 
