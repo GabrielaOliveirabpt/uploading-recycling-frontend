@@ -8,4 +8,6 @@ The following technologies were used: React, Redux, Bootstrap, Node.js, Express 
 
 Please open the demo of our [WasteAid](https://uploading-recycling-frontend.herokuapp.com/) app project in your browser.
 
-The project repository can also be found [here](https://github.com/arodriguezge/WasteAid) 
+The project repository can also be found [here](https://github.com/arodriguezge/WasteAid)
+
+![Screenshot: App Presentation](./public/images/app-presentation.png)
